@@ -54,7 +54,7 @@ export const updatePost = async (id, postFields) => {
   // await updating a post by id
   // return *updated* post
   try {
-    const updatedPost = await Post.updateOne({ _id: id }, postFields);
+    const updatedPost = await Post.findOneAndUpdate({ _id: id }, postFields, { new: true });
     return updatedPost;
   } catch (error) {
     throw new Error(`update post error: ${error}`);
