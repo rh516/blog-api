@@ -5,7 +5,6 @@ export const createPost = async (postFields) => {
   // return post
   const newPost = new Post();
   newPost.title = postFields.title;
-  newPost.tags = postFields.tags;
   newPost.content = postFields.content;
   newPost.coverUrl = postFields.coverUrl;
 
